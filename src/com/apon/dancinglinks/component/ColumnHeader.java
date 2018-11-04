@@ -13,8 +13,6 @@ public class ColumnHeader extends Header {
 
     private boolean isPrimary;
 
-    private int relativeIdentifier;
-
     public ColumnHeader(boolean isPrimary) {
         this.isPrimary = isPrimary;
         nrOfNodesInColumn = 0;
@@ -51,13 +49,5 @@ public class ColumnHeader extends Header {
     @Override
     public boolean isColumn() {
         return true;
-    }
-
-    public int getRelativeIdentifier() {
-        return relativeIdentifier;
-    }
-
-    public void setRelativeIdentifier(int relativeIdentifier) {
-        this.relativeIdentifier = relativeIdentifier;
     }
 }

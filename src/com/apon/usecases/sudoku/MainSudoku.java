@@ -5,6 +5,7 @@ import com.apon.dancinglinks.component.Matrix;
 import com.apon.dancinglinks.component.RowHeader;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class MainSudoku {
@@ -35,6 +36,9 @@ public class MainSudoku {
         }
 
         DancingLinksSudoku dancingLinksSudoku = new DancingLinksSudoku(matrix, startingSolution);
-        System.out.println(dancingLinksSudoku.getAllSolutions());
+        System.out.println("Found " + dancingLinksSudoku.getAllSolutions().size() + " solution(s)!");
+        List<String> solutions = dancingLinksSudoku.getAllSolutions().get(0);
+        Collections.sort(solutions);
+        System.out.println(solutions);
     }
 }

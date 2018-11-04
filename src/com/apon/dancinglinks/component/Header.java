@@ -6,6 +6,8 @@ package com.apon.dancinglinks.component;
 public abstract class Header implements Comparable<Header> {
     private int identifier;
 
+    private int relativeIdentifier;
+
     public abstract boolean isColumn();
 
     public int getIdentifier() {
@@ -14,6 +16,14 @@ public abstract class Header implements Comparable<Header> {
 
     public void setIdentifier(int identifier) {
         this.identifier = identifier;
+    }
+
+    public int getRelativeIdentifier() {
+        return relativeIdentifier;
+    }
+
+    public void setRelativeIdentifier(int relativeIdentifier) {
+        this.relativeIdentifier = relativeIdentifier;
     }
 
     @Override

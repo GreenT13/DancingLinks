@@ -39,8 +39,10 @@ public class DancingLinks {
 
         ExecutionTimer t = new ExecutionTimer();
         recursiveStep();
+        hasBeenSolved = true;
         t.end();
         System.out.println("Calculating all solutions took " + t.duration() + " ms");
+
 
         return solutions;
     }

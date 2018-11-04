@@ -24,7 +24,7 @@ public class SudokuMatrixBuilder {
                             81 + r * 9 + i,
                             162 + c * 9 + i,
                             243 + 9*(3*(r/3)+(c/3)) + i);
-                    rowIdentifiers.add("R"+r+"C"+c+"#"+i);
+                    rowIdentifiers.add("R"+r+"C"+c+"#"+(i+1));
                 }
             }
         }

@@ -81,6 +81,9 @@ public class MatrixOperator {
             Node node = rowIterator.next();
             removeNodeFromColumn(node);
         }
+
+        rowHeader.setRelativeIdentifier(matrix.getRowHeaders().indexOf(rowHeader));
+        matrix.getRowHeaders().remove(rowHeader);
     }
 
     /**
@@ -136,6 +139,8 @@ public class MatrixOperator {
             restoreNodeInColumn(iteratorNode);
             iteratorNode = iteratorNode.right;
         }
+
+        matrix.getRowHeaders().add(rowHeader.getRelativeIdentifier(), rowHeader);
     }
 
     private void restoreNodeInRow(Node node) {
